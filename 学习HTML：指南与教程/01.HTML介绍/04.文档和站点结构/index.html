@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文档和站点结构</title>
+
+    <style type="text/css">
+      body {
+        background-color: lightgrey;
+        padding: 20px;
+      }
+      header {
+        /* background-color: gray; */
+        height: 80px;
+      }
+      nav {
+        background-color: rgb(57, 192, 255);
+        height: 80px;
+      }
+      main {
+        height: calc(100vh - 300px);
+        overflow: hidden;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      article {
+        background-color: aliceblue;
+        height: 100%;
+        width: calc(100% - 200px);
+      }
+      aside {
+        background-color: rgb(57, 192, 255);
+        width: 190px;
+        height: 100%;
+        top: 0;
+      }
+      footer {
+        height: 60px;
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <nav></nav>
+    <main>
+      <article></article>
+      <aside></aside>
+    </main>
+    <footer></footer>
+  </body>
+</html>
