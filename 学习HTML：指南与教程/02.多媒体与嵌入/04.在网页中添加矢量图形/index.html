@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>在网页中添加矢量图形</title>
+  </head>
+  <body>
+    <article>
+      <h1>将SVG添加到页面</h1>
+      <article>
+        <h1>快捷方式: &lt;img&gt;</h1>
+        <img
+          src="images/sample.svg"
+          alt="simple with rect and circle svg source"
+          width="300"
+        />
+      </article>
+      <article>
+        <h1>如何在HTML中引入SVG代码</h1>
+        <svg width="300" height="200">
+          <rect width="100%" height="100%" fill="green" />
+        </svg>
+      </article>
+      <article>
+        <h1>如何使用 &lt;iframe&lt; 嵌入SVG</h1>
+        <iframe
+          src="images/sample.svg"
+          width="300"
+          height="200"
+          frameborder="0"
+          sandbox
+        ></iframe>
+      </article>
+    </article>
+  </body>
+</html>
