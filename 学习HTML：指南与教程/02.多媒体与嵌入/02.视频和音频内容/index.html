@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>视频和音频内容</title>
+  </head>
+  <body>
+    <article>
+      <h1>&lt;video&gt;元素</h1>
+      <video src="videos/rabbit320.mp4" controls>
+        <p>
+          你的浏览器不支持HTML5视频。可点击
+          <a href="videos/rabbit320.mp4">此链接</a>
+          观看
+        </p>
+      </video>
+    </article>
+    <article>
+      <h1>使用多个播放源以提高兼容性</h1>
+      <video controls>
+        <source src="videos/rabbit320.mp4" type="video/mp4" />
+        <source src="videos/rabbit320.webm" type="video/webm" />
+      </video>
+    </article>
+    <article>
+      <h1>其他&lt;video&gt;特性</h1>
+      <video
+        controls
+        width="400"
+        height="400"
+        autoplay
+        loop
+        muted
+        poster="images/poster.png"
+      >
+        <source src="videos/rabbit320.mp4" type="video/mp4" />
+        <source src="videos/rabbit320.webm" type="video/webm" />
+      </video>
+    </article>
+    <article>
+      <h1>&lt;audio&gt;标签</h1>
+      <audio controls>
+        <source src="audios/viper.mp3" type="audio/mp3" />
+        <source src="audios/viper.ogg" type="audio/ogg" />
+        <p>
+          你的浏览器不支持 HTML5 音频，可点击
+          <a href="viper.mp3">此链接</a>
+          收听。
+        </p>
+      </audio>
+    </article>
+  </body>
+</html>
