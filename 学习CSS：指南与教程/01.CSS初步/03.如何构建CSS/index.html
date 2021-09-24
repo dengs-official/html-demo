@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>如何构建CSS</title>
+
+    <style>
+      :root {
+        --main-color: hotpink;
+        --main-size: 50px;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import "util.css";
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>函数</h1>
+      <div class="calc">
+        <div class="box">The inner box is 905 - 30px</div>
+      </div>
+      <div class="var">
+        <p>The color and font-size set by var()</p>
+      </div>
+    </article>
+    <article>
+      <h1>@规则</h1>
+      <div class="import">All the style set by @rule</div>
+    </article>
+  </body>
+</html>
