@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>层叠与继承</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <article>
+      <h1>层叠</h1>
+      <h1 class="cd">This is my CD heading.</h1>
+    </article>
+    <article>
+      <h1>优先级</h1>
+      <h2 class="yxj">This is my YXJ heading.</h2>
+    </article>
+    <article class="jc">
+      <h1>继承</h1>
+      <p>
+        As the article has been set to have a color of blue this is inherited
+        through the descendants.
+      </p>
+      <p>
+        We can change the color by targetting the element with a selector, such
+        as this <span>span</span>.
+      </p>
+    </article>
+    <article class="kzjc">
+      <h1>控制继承</h1>
+      <ul>
+        <li>Default <a href="#">link</a> color</li>
+        <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+        <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+        <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+      </ul>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+.cd {
+  color: red;
+}
+.cd {
+  color: blue;
+}
+
+.yxj {
+  color: red;
+}
+h2 {
+  color: green;
+}
+
+.jc {
+  color: blue;
+}
+span {
+  color: black;
+}
+
+.kzjc {
+  color: green;
+}
+.my-class-1 a {
+  color: inherit;
+}
+.my-class-2 a {
+  color: initial;
+}
+.my-class-3 a {
+  color: unset;
+}
+
+/* body,
+body * {
+  font-size: initial;
+  color: initial;
+} */
