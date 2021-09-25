@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>在CSS中调整大小</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .one img,
+      .one .box {
+        border: 5px solid darkblue;
+      }
+      .two .box {
+        border: 5px solid darkblue;
+        height: 150px;
+        width: 200px;
+        font-size: 1.3em;
+      }
+      .three .box {
+        width: 50%;
+        border: 5px solid darkblue;
+      }
+      .four .box {
+        border: 5px solid darkblue;
+        width: 300px;
+        margin: 10%;
+        padding: 10%;
+      }
+      .five .wrapper {
+        display: flex;
+        align-items: flex-start;
+      }
+      .five .box {
+        width: 200px;
+        border: 5px solid darkblue;
+        margin-right: 1em;
+      }
+      .five .minibox {
+        width: 50px;
+        border: 5px solid darkblue;
+      }
+      .five .width {
+        width: 100%;
+      }
+      .five .max {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="one">
+      <h1>原始尺寸，或固有尺寸</h1>
+      <img src="images/star.png" />
+      <div class="box"></div>
+    </article>
+    <article class="two">
+      <h1>设置具体的尺寸</h1>
+      <div class="box">
+        These boxes both have a height set, this box has content in it which
+        will need more space than the assigned height, and so we get overflow.
+      </div>
+    </article>
+    <article class="three">
+      <h1>使用百分数</h1>
+      <div class="box">I have a percentage width.</div>
+    </article>
+    <article class="four">
+      <h1>把百分数作为内外边距</h1>
+      <div class="box">I have margin and padding set to 10% on all sides.</div>
+    </article>
+    <article class="five">
+      <h1>min-和max-尺寸</h1>
+      <div class="wrapper">
+        <div class="box">
+          <img src="images/star.png" alt="star" class="width" />
+        </div>
+        <div class="box">
+          <img src="images/star.png" alt="star" class="max" />
+        </div>
+        <div class="minibox">
+          <img src="images/star.png" alt="star" class="max" />
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
