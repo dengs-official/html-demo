@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>背景与边框</title>
+
+    <style>
+      .one .box {
+        width: 500px;
+        height: 300px;
+        background: linear-gradient(
+              105deg,
+              rgba(255, 255, 255, 0.2) 39%,
+              rgba(51, 56, 57, 1) 96%
+            )
+            center center / 400px 200px no-repeat,
+          rebeccapurple;
+      }
+      .two .box {
+        width: 500px;
+        background-color: #567895;
+        border: 5px solid #0b385f;
+        border-bottom-style: dashed;
+        color: #fff;
+        padding: 0 0.5em;
+      }
+      .two h2 {
+        padding: 0.5em 0;
+        border-top: 2px dotted rebeccapurple;
+        border-bottom: 1em double rgb(24, 163, 78);
+      }
+      .three .box {
+        width: 500px;
+        border: 10px solid rebeccapurple;
+        border-radius: 1em;
+        border-top-right-radius: 10% 30%;
+        padding: 0.5em 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="one">
+      <h1>使用background缩写</h1>
+      <div class="box"></div>
+    </article>
+    <article class="two">
+      <h1>边框</h1>
+      <div class="box">
+        <h2>Borders</h2>
+        <p>Try changing the borders.</p>
+      </div>
+    </article>
+    <article class="three">
+      <h1>圆角边框</h1>
+      <div class="box">
+        <h2>Borders</h2>
+        <p>Try changing the borders.</p>
+      </div>
+    </article>
+  </body>
+</html>
