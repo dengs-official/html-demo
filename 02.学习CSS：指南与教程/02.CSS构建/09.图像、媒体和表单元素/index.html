@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图像、媒体和表单元素</title>
+
+    <style>
+      .wrapper {
+        display: flex;
+        align-items: flex-start;
+      }
+      .wrapper * {
+        margin-right: 20px;
+      }
+      .one .box {
+        width: 200px;
+        border: 5px solid darkblue;
+      }
+      .one img {
+        max-width: 100%;
+      }
+      .two .box {
+        width: 200px;
+        height: 200px;
+        border: 5px solid darkblue;
+      }
+      .two img {
+        width: 100%;
+        height: 100%;
+        /* max-width: 100%; */
+      }
+      .two .box:first-child img {
+        object-fit: cover;
+      }
+      .two .box:last-child img {
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="one">
+      <h1>调整图像大小</h1>
+      <div class="wrapper">
+        <div class="box"><img src="images/star.png" alt="star" /></div>
+        <div class="box"><img src="images/balloons.jpg" alt="balloons" /></div>
+      </div>
+    </article>
+    <article class="two">
+      <h1>使用object-fit</h1>
+      <div class="wrapper">
+        <div class="box"><img src="images/balloons.jpg" alt="balloons" /></div>
+        <div class="box"><img src="images/balloons.jpg" alt="balloons" /></div>
+      </div>
+    </article>
+  </body>
+</html>
