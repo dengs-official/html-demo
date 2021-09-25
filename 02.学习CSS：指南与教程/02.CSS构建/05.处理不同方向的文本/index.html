@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>处理不同方向的文本</title>
+
+    <style>
+      .one h1:last-child {
+        background-color: black;
+        color: white;
+        padding: 0.5em;
+        writing-mode: vertical-rl;
+      }
+      .wrapper {
+        display: flex;
+      }
+      .box {
+        border: 1px solid #000;
+        padding: 1em;
+      }
+      .two .box:first-child {
+        width: 500px;
+        margin-right: 20px;
+      }
+      .horizontal {
+        writing-mode: horizontal-tb;
+      }
+      .vertical {
+        writing-mode: vertical-rl;
+      }
+      .three .box {
+        /* width: 80px; */
+        inline-size: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="one">
+      <h1>什么是书写模式</h1>
+      <h1>Play with writing modes</h1>
+    </article>
+    <article class="two">
+      <h1>书写模式、块级布局和内联布局</h1>
+      <div class="wrapper">
+        <div class="box horizontal">
+          <h2>Heading</h2>
+          <p>A paragraph. Demonstrating Writing Modes in CSS.</p>
+        </div>
+        <div class="box vertical">
+          <h2>Heading</h2>
+          <p>A paragraph. Demonstrating Writing Modes in CSS.</p>
+        </div>
+      </div>
+    </article>
+    <article class="three">
+      <h1>逻辑属性和逻辑值</h1>
+      <div class="wrapper">
+        <div class="box horizontal">
+          <h2>Heading</h2>
+          <p>A paragraph. Demonstrating Writing Modes in CSS.</p>
+          <p>These boxes have inline-size.</p>
+        </div>
+        <div class="box vertical">
+          <h2>Heading</h2>
+          <p>A paragraph. Demonstrating Writing Modes in CSS.</p>
+          <p>These boxes have inline-size.</p>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
