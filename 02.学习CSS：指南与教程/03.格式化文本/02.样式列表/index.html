@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>样式列表</title>
+
+    <style>
+      html {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 10px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      ul,
+      ol,
+      dl,
+      p {
+        font-size: 1.5rem;
+      }
+
+      li,
+      p {
+        line-height: 1.5;
+      }
+
+      /* Description list styles */
+
+      dd,
+      dt {
+        line-height: 1.5;
+      }
+
+      dt {
+        font-weight: bold;
+      }
+
+      dd {
+        margin-bottom: 1.5rem;
+      }
+
+      .two ol {
+        list-style-type: upper-roman;
+        list-style-position: outside;
+        /* list-style-image: url(star.png); */
+        padding-left: 2rem;
+        list-style-type: none;
+      }
+      .two ol li {
+        padding-left: 2rem;
+        background-image: url(star.png);
+        background-position: 0 0;
+        background-size: 1.6rem 1.6rem;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>处理列表间距</h1>
+      <h2>Shopping (unordered) list</h2>
+
+      <p>
+        Paragraph for reference, paragraph for reference, paragraph for
+        reference, paragraph for reference, paragraph for reference, paragraph
+        for reference.
+      </p>
+
+      <ul>
+        <li>Humous</li>
+        <li>Pitta</li>
+        <li>Green salad</li>
+        <li>Halloumi</li>
+      </ul>
+
+      <h2>Recipe (ordered) list</h2>
+
+      <p>
+        Paragraph for reference, paragraph for reference, paragraph for
+        reference, paragraph for reference, paragraph for reference, paragraph
+        for reference.
+      </p>
+
+      <ol>
+        <li>Toast pitta, leave to cool, then slice down the edge.</li>
+        <li>
+          Fry the halloumi in a shallow, non-stick pan, until browned on both
+          sides.
+        </li>
+        <li>Wash and chop the salad.</li>
+        <li>Fill pitta with salad, humous, and fried halloumi.</li>
+      </ol>
+
+      <h2>Ingredient description list</h2>
+
+      <p>
+        Paragraph for reference, paragraph for reference, paragraph for
+        reference, paragraph for reference, paragraph for reference, paragraph
+        for reference.
+      </p>
+
+      <dl>
+        <dt>Humous</dt>
+        <dd>
+          A thick dip/sauce generally made from chick peas blended with tahini,
+          lemon juice, salt, garlic, and other ingredients.
+        </dd>
+        <dt>Pitta</dt>
+        <dd>A soft, slightly leavened flatbread.</dd>
+        <dt>Halloumi</dt>
+        <dd>
+          A semi-hard, unripened, brined cheese with a higher-than-usual melting
+          point, usually made from goat/sheep milk.
+        </dd>
+        <dt>Green salad</dt>
+        <dd>
+          That green healthy stuff that many of us just use to garnish kebabs.
+        </dd>
+      </dl>
+    </article>
+    <article class="two">
+      <h1>列表特定样式</h1>
+      <ol>
+        <li>Toast pitta, leave to cool, then slice down the edge.</li>
+        <li>
+          Fry the halloumi in a shallow, non-stick pan, until browned on both
+          sides.
+        </li>
+        <li>Wash and chop the salad.</li>
+        <li>Fill pitta with salad, humous, and fried halloumi.</li>
+      </ol>
+    </article>
+    <article class="three">
+      <h1>管理列表计数</h1>
+      <ol start="4">
+        <li>Toast pitta, leave to cool, then slice down the edge.</li>
+        <li>
+          Fry the halloumi in a shallow, non-stick pan, until browned on both
+          sides.
+        </li>
+        <li>Wash and chop the salad.</li>
+        <li>Fill pitta with salad, humous, and fried halloumi.</li>
+      </ol>
+      <ol start="4" reversed>
+        <li>Toast pitta, leave to cool, then slice down the edge.</li>
+        <li>
+          Fry the halloumi in a shallow, non-stick pan, until browned on both
+          sides.
+        </li>
+        <li>Wash and chop the salad.</li>
+        <li>Fill pitta with salad, humous, and fried halloumi.</li>
+      </ol>
+      <ol>
+        <li value="2">Toast pitta, leave to cool, then slice down the edge.</li>
+        <li value="4">
+          Fry the halloumi in a shallow, non-stick pan, until browned on both
+          sides.
+        </li>
+        <li value="6">Wash and chop the salad.</li>
+        <li value="8">Fill pitta with salad, humous, and fried halloumi.</li>
+      </ol>
+    </article>
+  </body>
+</html>
