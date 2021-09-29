@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>传统的布局方案</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 10px;
+      }
+      a {
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        font-size: 1.5em;
+      }
+      a:link,
+      a:visited {
+        color: #005282;
+      }
+      a:hover,
+      a:focus {
+        color: #052131;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="static.html">Static</a></li>
+        <li><a href="fluid.html">Fluid</a></li>
+        <li><a href="offset.html">Offset</a></li>
+        <li><a href="flex.html">Flex</a></li>
+        <li><a href="third/index.html">Third--Skeleton</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
