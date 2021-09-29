@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BFC</title>
+
+    <style>
+      .box {
+        background-color: rgb(224, 206, 247);
+        border: 5px solid rebeccapurple;
+        display: flow-root;
+        margin: 20px 0;
+      }
+      .box1 {
+        display: flow-root;
+      }
+      .box2 {
+        margin: 20px 0;
+        height: 200px;
+        background-color: aliceblue;
+      }
+      .float {
+        float: left;
+        width: 200px;
+        height: 150px;
+        background-color: white;
+        border: 1px solid black;
+        padding: 10px;
+        display: flow-root;
+      }
+      .float1 {
+        float: left;
+        width: 100px;
+        height: 200px;
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="float">
+        <!-- <div class="float1">I am another floated box!!</div> -->
+        I am a floated box!
+      </div>
+      <!-- <div class="float1">I am another floated box!!</div> -->
+      <p>I am content inside the container.</p>
+    </div>
+    <div class="box1">
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>
