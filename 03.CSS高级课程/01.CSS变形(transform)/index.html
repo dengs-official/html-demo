@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS变形(transform)</title>
+
+    <style>
+      .one span {
+        padding: 1rem;
+        border: 1px solid rebeccapurple;
+        transform: rotate(45deg);
+        /* display: inline-block; */
+      }
+      .two img {
+        transition: all 1s;
+      }
+      .two img:nth-of-type(1):hover {
+        transform: rotate(90deg);
+        transform-origin: bottom right;
+      }
+      .two img:nth-of-type(2):hover {
+        transform: skew(45deg);
+      }
+
+      .pers250 {
+        perspective: 250px;
+      }
+      .pers350 {
+        perspective: 350px;
+      }
+      .pers500 {
+        perspective: 500px;
+      }
+      .pers650 {
+        perspective: 650px;
+      }
+      .container {
+        width: 200px;
+        height: 200px;
+        margin: 75px 0 0 75px;
+        border: none;
+      }
+      .cube {
+        width: 100%;
+        height: 100%;
+        backface-visibility: visible;
+        perspective-origin: 150% 150%;
+        transform-style: preserve-3d;
+      }
+
+      .face {
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: none;
+        line-height: 100px;
+        font-family: sans-serif;
+        font-size: 60px;
+        color: white;
+        text-align: center;
+      }
+      /* Define each face based on direction */
+      .front {
+        background: rgba(0, 0, 0, 0.3);
+        transform: translateZ(50px);
+      }
+
+      .back {
+        background: rgba(0, 255, 0, 1);
+        color: black;
+        transform: rotateY(180deg) translateZ(50px);
+      }
+
+      .right {
+        background: rgba(196, 0, 0, 0.7);
+        transform: rotateY(90deg) translateZ(50px);
+      }
+
+      .left {
+        background: rgba(0, 0, 196, 0.7);
+        transform: rotateY(-90deg) translateZ(50px);
+      }
+
+      .top {
+        background: rgba(196, 196, 0, 0.7);
+        transform: rotateX(90deg) translateZ(50px);
+      }
+
+      .bottom {
+        background: rgba(196, 0, 196, 0.7);
+        transform: rotateX(-90deg) translateZ(50px);
+      }
+
+      /* Make the table a little nicer */
+      th,
+      p,
+      td {
+        background-color: #eeeeee;
+        padding: 10px;
+        font-family: sans-serif;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="one">
+      <h1>只有使用盒模型定位才可以被变形</h1>
+      <span>我是一个内联盒子</span>
+    </article>
+    <article class="two">
+      <h1>CSS transforms 属性</h1>
+      <img src="images/mozilla.png" />
+      <img src="images/mozilla.png" />
+    </article>
+    <article class="three">
+      <h1>适用于三维的属性</h1>
+      <table>
+        <tbody>
+          <tr>
+            <th><code>perspective: 250px;</code></th>
+            <th><code>perspective: 350px;</code></th>
+          </tr>
+          <tr>
+            <td>
+              <div class="container">
+                <div class="cube pers250">
+                  <div class="face front">1</div>
+                  <div class="face back">2</div>
+                  <div class="face right">3</div>
+                  <div class="face left">4</div>
+                  <div class="face top">5</div>
+                  <div class="face bottom">6</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="container">
+                <div class="cube pers350">
+                  <div class="face front">1</div>
+                  <div class="face back">2</div>
+                  <div class="face right">3</div>
+                  <div class="face left">4</div>
+                  <div class="face top">5</div>
+                  <div class="face bottom">6</div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th><code>perspective: 500px;</code></th>
+            <th><code>perspective: 650px;</code></th>
+          </tr>
+          <tr>
+            <td>
+              <div class="container">
+                <div class="cube pers500">
+                  <div class="face front">1</div>
+                  <div class="face back">2</div>
+                  <div class="face right">3</div>
+                  <div class="face left">4</div>
+                  <div class="face top">5</div>
+                  <div class="face bottom">6</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="container">
+                <div class="cube pers650">
+                  <div class="face front">1</div>
+                  <div class="face back">2</div>
+                  <div class="face right">3</div>
+                  <div class="face left">4</div>
+                  <div class="face top">5</div>
+                  <div class="face bottom">6</div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </body>
+</html>
