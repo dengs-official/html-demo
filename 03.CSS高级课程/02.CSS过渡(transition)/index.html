@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS过渡(transition)</title>
+
+    <style>
+      .box {
+        border-style: solid;
+        border-width: 1px;
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-color: #0000ff;
+        -webkit-transition: width 2s, height 2s, background-color 2s,
+          -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 2s, transform 2s;
+      }
+      .box:hover {
+        background-color: #ffcccc;
+        width: 200px;
+        height: 200px;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+
+      .two ul {
+        list-style: none;
+      }
+      .two li {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+      }
+      .two li.append {
+        opacity: 1;
+        color: rebeccapurple;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="one">
+      <h1>多个属性一起动画示例</h1>
+      <p>
+        盒子的多个属性一起动画: width, height, background-color, transform.
+        将光标悬停在盒子上查看动画。
+      </p>
+      <div class="box" id="box"></div>
+    </article>
+    <article class="two">
+      <h1>动态添加过渡</h1>
+      <ul id="list"></ul>
+    </article>
+
+    <script>
+      const boxEle = document.getElementById("box");
+      boxEle.addEventListener(
+        "transitionend",
+        (...args) => {
+          console.log(args);
+        },
+        true
+      );
+
+      const listEle = document.getElementById("list");
+      for (let i = 0; i < 3; i++) {
+        const itemEle = document.createElement("li");
+        itemEle.innerHTML = `Item ${i + 1}`;
+        listEle.appendChild(itemEle);
+        setTimeout(() => {
+          itemEle.className = "append";
+        }, (i + 1) * 500);
+      }
+    </script>
+  </body>
+</html>
